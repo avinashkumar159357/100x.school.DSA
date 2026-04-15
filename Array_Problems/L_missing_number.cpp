@@ -26,6 +26,7 @@ void solve(){     //using map
     
     cout<<ans<<"\n";
 }    */  
+//there is another approach using frequency array through which i have solved in the next question (M)
 int main() {
     ios :: sync_with_stdio(0);
     cin.tie(0);
