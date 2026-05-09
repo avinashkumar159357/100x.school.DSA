@@ -1,1 +1,6 @@
-Basics to advanced Data structure and algorithm problem solving on codeforces 
+DSA foundation strengthening now with 100xschool
+
+Topics covered:
+-Array
+-2D Array
+-more coming ahead..
