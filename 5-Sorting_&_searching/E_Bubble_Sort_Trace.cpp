@@ -1,9 +1,9 @@
-//File name:selection sort
+//File name:Bubble Sort Trace
 //Author:Avinash kumar
 //Email Address: aviofficial159357@gmail.com
-//Problem ID:sorting and searching (D)
+//Problem ID:sorting and searching (E)
 //Description:getting familiar with the searching method 
-//Last Changed:18-05-2026
+//Last Changed:19-05-2026
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -15,23 +15,24 @@ void solve() {
     
     for (int i = 0; i < n-1; i++)
     {
-        int min_ind=i;  //chose the first element of unsorted array 
-        for (int j = i+1; j < n; j++)
+        int count=0;
+        
+        for (int j = 1; j < n; j++)
         {
-            if(a[j]<a[min_ind]){
-                min_ind=j;  //got the index of minimum element of unsorted array
+            if(a[j-1]>a[j]){
+                swap(a[j-1],a[j]);
+                count++;
             }
         }
-        int min_selected=a[min_ind];
-
-        swap(a[i],a[min_ind]); //swapped the minimum with the first element
 
         cout<<"Pass "<<i+1<<": ";
         for (auto x : a) cout<<x<<" ";
         cout<<", ";
-        cout<<"min_selected = "<<min_selected;
+        cout<<"swaps = "<<count;
 
         cout<<"\n";
+
+        if(count==0) break;
     }
     
 }
