@@ -7,7 +7,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-int sum_of_digits()
+
 void solve(){  
     string s; cin>>s;
     int a_count=0,b_count=0;
