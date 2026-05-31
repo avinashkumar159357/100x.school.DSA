@@ -19,6 +19,29 @@ void solve(){  //1<=N<=2*10^9
 
     cout<< max(0LL,ans) <<"\n";
 }
+
+/*void solve(){  //1<=N<=2*10^9  another answer covering all the cases one by one
+    ll t,l,r; cin>>t>>l>>r;
+
+    if(l>r){
+        cout<<"0\n";
+        return;
+    }else if(l==r && t==1) {
+        cout<<"0\n";
+        return;
+    }else if(l==r && t==4){
+        cout<<"1\n";
+        return;
+    }
+    
+    ll ans=0;
+    if(t==1) ans=(r-l-1);
+    if(t==2) ans=(r-l);
+    if(t==3) ans=(r-l);
+    if(t==4) ans=(r-l+1);
+
+   cout<<ans<<"\n";
+}*/
 int main() {
     ios :: sync_with_stdio(0);
     cin.tie(0);
