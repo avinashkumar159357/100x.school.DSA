@@ -8,6 +8,25 @@
 using namespace std;
 #define ll long long
 
+/*void solve(){  //better solution than using set as in solution -2
+    int n; cin>>n;
+    ll x; cin>>x;
+
+    vector<ll>a(n);
+    for (int i = 0; i < n; i++) cin>>a[i];
+
+    map<ll,ll>mp;
+    for (int  i = 0; i < n; i++)
+    {
+        ll need =x-a[i];
+        if(mp.count(need)){
+            cout<<"TRUE";
+            return;
+        }
+        mp[a[i]]++;
+    }
+    cout<<"FALSE";
+}*/
 void solve(){ 
     int n; cin>>n;
     ll x ; cin>>x;
@@ -17,7 +36,7 @@ void solve(){
 
     for (int i = 0; i < n; i++)
     {
-        int need =x-a[i];
+        ll need =x-a[i];
         if(st.find(need)!=st.end()){
             cout<<"TRUE";
             return;
