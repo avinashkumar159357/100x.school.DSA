@@ -8,24 +8,47 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
+
+//it is better to solve this problem with frequency map
 void solve(){
     int n; cin>>n;
+    unordered_map<char,int>mp;
+
     string s; cin>>s;
-    unordered_set<char>st;
-    
+
     int l=0,ans=0;
     for (int i = 0; i < n; i++)
     {
-        while (st.count(s[i]))
-        {   
-            st.erase(s[l]);
+        mp[s[i]]++;
+
+        while (mp[s[i]]>1)
+        {
+            mp[s[l]]--;
             l++;
         }
-        st.insert(s[i]);
         ans=max(ans,i-l+1);
     }
     cout<<ans;
 }
+
+// void solve(){
+//     int n; cin>>n;
+//     string s; cin>>s;
+//     unordered_set<char>st;
+    
+//     int l=0,ans=0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         while (st.count(s[i]))
+//         {   
+//             st.erase(s[l]);
+//             l++;
+//         }
+//         st.insert(s[i]);
+//         ans=max(ans,i-l+1);
+//     }
+//     cout<<ans;
+// }
 int main() {
     ios :: sync_with_stdio(0);
     cin.tie(0);
